@@ -20,7 +20,7 @@ Route::get('/', function () {
 
     $coursesQuery = User::first()->courses();
 
-    dump("Query of type: " . get_class($coursesQuery));
+    dump("coursesQuery of type: " . get_class($coursesQuery));
 
     $users = $coursesQuery->when($someCondition, function ($query) {
         dump("Query of type: " . get_class($query));
